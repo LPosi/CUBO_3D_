@@ -1,0 +1,143 @@
+body {
+    background-color: #7e7e7e;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    background-color: #333333;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.contenedor .pages {
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: right;
+    gap:5px
+}
+
+.contenedor .pages a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+}
+
+section {
+    background-color: #3333335d;
+    margin: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    list-style: none;
+}
+
+main {
+    margin: 0 100px
+}
+
+main section p {
+    display: flex;
+    justify-content:center;
+    gap: 100px
+}
+
+section ul li {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+section h1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+section .hero p {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.hero h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.image-container {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+footer {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .contenedor .pages {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        margin: 0 20px;
+    }
+
+    section {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .image-container {
+        width: 90%;
+        height: auto;
+    }
+
+    .image-container img {
+        object-fit: contain;
+    }
+}
