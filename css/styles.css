@@ -6,7 +6,7 @@ body {
     padding: 0;
 }
 
-.contenedor {
+.content {
     background-color: #333333;
     padding: 16px;
     display: flex;
@@ -15,7 +15,7 @@ body {
     gap: 30px;
 }
 
-.contenedor .pages {
+.content .pages {
     list-style: none;
     margin: 5px;
     padding: 5px;
@@ -24,7 +24,7 @@ body {
     gap:5px
 }
 
-.contenedor .pages a {
+.content .pages a {
     text-decoration: none;
     color: white;
     padding: 8px 12px;
@@ -66,7 +66,7 @@ section .hero p {
     align-content: center;
 }
 
-.video-container {
+.video-content {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -85,7 +85,7 @@ section .hero p {
     margin: 20px 0;
 }
 
-.image-container {
+.image-content {
     width: 80%;
     max-width: 500px;
     margin: 20px auto;
@@ -95,11 +95,10 @@ section .hero p {
     align-items: center;
 }
 
-.image-container img {
+.image-content img {
     width: 100%;
     height: auto;
     max-height: 400px;
-    object-fit: contain;
     border-radius: 12px;
 }
 
@@ -112,13 +111,13 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    .contenedor {
+    .content {
         flex-direction: column;
         gap: 15px;
         padding: 10px;
     }
 
-    .contenedor .pages {
+    .content .pages {
         justify-content: center;
         flex-wrap: wrap;
     }
@@ -132,12 +131,17 @@ footer {
         padding: 15px;
     }
 
-    .image-container {
+    .image-content {
         width: 90%;
         height: auto;
     }
 
-    .image-container img {
+    .image-content img {
         object-fit: contain;
     }
+}
+
+header.content nav a.active {
+    font-weight: 700;
+    border-bottom: 1px solid white;
 }
