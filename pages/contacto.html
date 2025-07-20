@@ -1,69 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CUBO 3D</title>
+    <title>CUBO 3D - Contacto</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
-    <header class="content">
-        <div>
-            <img src="../images/logo.png" alt="logo" class="logo">
+    <header class="header">
+        <div class="logo-wrapper">
+            <img src="../images/logo.png" alt="Logo CUBO 3D" class="logo">
         </div>
-        <nav>
-            <ul class="pages">
+        <nav class="nav">
+            <ul class="nav-list">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./nosotros.html">Nosotros</a></li>
                 <li><a href="./productos.html">Productos</a></li>
                 <li><a href="./servicios.html">Servicios</a></li>
                 <li><a class="active" href="./contacto.html">Contacto</a></li>
             </ul>
-            </ul>
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <br>
-            <h2>¿Listo para materializar tu proyecto?</h2>
-            <p>Envianos tus archivos 3D o describinos lo que necesitas. ¡Cotización sin costo!</p>
-            <br>
+        <section class="section hero">
+            <h2 class="section-title">¿Listo para materializar tu proyecto?</h2>
+            <p class="section-text">Envianos tus archivos 3D o describinos lo que necesitas. ¡Cotización sin costo!</p>
         </section>
-        <section class="contact-form">
-            <br>
-            <h3>Formulario de contacto</h3>
+        <section class="section contact-form">
+            <h3 class="section-subtitle">Formulario de contacto</h3>
             <form action="/enviar" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" required>
                 </div>
-                <br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <br>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
                 <div class="form-group">
                     <label for="mensaje">Describe tu proyecto:</label>
                     <textarea id="mensaje" name="mensaje" required></textarea>
                 </div>
-                <br>
-                <button type="submit">Enviar</button>
+                <button type="submit" class="btn-submit">Enviar</button>
             </form>
-            <br>
         </section>
-        <section>
-            <br>
-            <h3>También puedes contactarnos por:</h3>
-            <ul>
+        <section class="section">
+            <h3 class="section-subtitle">También puedes contactarnos por:</h3>
+            <ul class="contact-list">
                 <li>📧 Email: <a href="mailto:proyectos@cubo3d.com.ar">proyectos@cubo3d.com.ar</a></li>
                 <li>📞 Teléfono: +54 9 11 6627 6757</li>
             </ul>
-            <br>
         </section>
     </main>
-    <footer class="content">
-        <p>© 2025 CUBO 3D - Todos los derechos reservados</p>
+    <footer class="footer">
+        <p class="footer-text">© 2025 CUBO 3D - Todos los derechos reservados</p>
     </footer>
 </body>
 

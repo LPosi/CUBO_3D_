@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUBO 3D</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-
 <body>
-    <header class="content">
-        <div>
+    <header class="header">
+        <div class="logo-wrapper">
             <img src="./images/logo.png" alt="logo" class="logo">
         </div>
-        <nav>
-            <ul class="pages">
+        <nav class="nav">
+            <ul class="nav-list">
                 <li><a class="active" href="index.html">Inicio</a></li>
                 <li><a href="./pages/nosotros.html">Nosotros</a></li>
                 <li><a href="./pages/productos.html">Productos</a></li>
@@ -24,46 +22,37 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
-            <h1>
-                Servicios Integrales
-            </h1>
-            <br>
-            <p>
-                No solo imprimimos: te acompañamos desde el diseño hasta el acabado profesional.
-            </p>
-            <br>
+        <section class="section hero">
+            <h1 class="section-title">Servicios Integrales</h1>
+            <p class="section-text">No solo imprimimos: te acompañamos desde el diseño hasta el acabado profesional.</p>
+            <div class="image-content"> 
+                <img src="./images/Lámpara_3D_1.jpg" alt="Lámpara 3D">
+            </div>
         </section>
-        <br>
-        <section>
-            <h1>Nuestros Servicios</h1>
-            <br>
-            <ul>
+        <section class="section hero">
+            <h1 class="section-title">Nuestros Servicios</h1>
+            <ul class="section-list">
                 <li><strong>Diseño 3D:</strong> Modelado desde cero, optimización de archivos.</li>
-                <br>
                 <li><strong>Escaneo 3D:</strong> Digitalización de objetos reales.</li>
-                <br>
             </ul>
+            <div class="image-content">
+                <img src="./images/pistola_1.jpg" alt="Pistola 3D">
+            </div>
         </section>
-        <br>
-        <section>
-            <h1>Línea Técnica</h1>
-            <br>
-            <ul>
+        <section class="section">
+            <h1 class="section-title">Línea Técnica</h1>
+            <ul class="section-list">
                 <li>Soportes y repuestos para electrodomésticos.</li>
-                <br>
                 <li>Prototipos de productos (envases, mecanismos).</li>
-                <br>
                 <li>Piezas para robots y drones.</li>
-                <br>
             </ul>
+            <div class="image-content">
+                <img src="./images/acces_pelu.png" alt="Accesorio 3D">
+            </div>
         </section>
-
     </main>
-    <footer class="contenedor">
-        <p>© 2025 CUBO 3D - Todos los derechos reservados</p>
+    <footer class="footer">
+        <p class="footer-text">© 2025 CUBO 3D - Todos los derechos reservados</p>
     </footer>
-
 </body>
-
 </html>
