@@ -5,11 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUBO 3D</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
 <body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="./videos/background.mp4" type="video/mp4">
+            <source src="./videos/background.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
     <header class="header">
-        <div class="logo-wrapper">
-            <img src="./images/logo.png" alt="logo" class="logo">
+             <div class="logo-wrapper">
+            <img src="./images/logo.png" alt="Logo CUBO 3D" class="logo">
         </div>
         <nav class="nav">
             <ul class="nav-list">
@@ -21,6 +31,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="section hero">
             <h1 class="section-title">Servicios Integrales</h1>
@@ -29,6 +40,7 @@
                 <img src="./images/Lámpara_3D_1.jpg" alt="Lámpara 3D">
             </div>
         </section>
+
         <section class="section hero">
             <h1 class="section-title">Nuestros Servicios</h1>
             <ul class="section-list">
@@ -39,6 +51,7 @@
                 <img src="./images/pistola_1.jpg" alt="Pistola 3D">
             </div>
         </section>
+
         <section class="section">
             <h1 class="section-title">Línea Técnica</h1>
             <ul class="section-list">
@@ -51,8 +64,23 @@
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <p class="footer-text">© 2025 CUBO 3D - Todos los derechos reservados</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('bg-video');
+            const playPromise = video.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    video.muted = true;
+                    video.play();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
