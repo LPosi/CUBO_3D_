@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUBO 3D - Contacto</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
 
 <body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="../videos/background.mp4" type="video/mp4">
+            <source src="../videos/background.webm" type="video/webm">
+            Tu navegador no soporta videos HTML5
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
     <header class="header">
         <div class="logo-wrapper">
             <img src="../images/logo.png" alt="Logo CUBO 3D" class="logo">
@@ -23,11 +33,13 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="section hero">
             <h2 class="section-title">¿Listo para materializar tu proyecto?</h2>
             <p class="section-text">Envianos tus archivos 3D o describinos lo que necesitas. ¡Cotización sin costo!</p>
         </section>
+
         <section class="section contact-form">
             <h3 class="section-subtitle">Formulario de contacto</h3>
             <form action="/enviar" method="POST">
@@ -46,6 +58,7 @@
                 <button type="submit" class="btn-submit">Enviar</button>
             </form>
         </section>
+
         <section class="section">
             <h3 class="section-subtitle">También puedes contactarnos por:</h3>
             <ul class="contact-list">
@@ -54,9 +67,26 @@
             </ul>
         </section>
     </main>
+
     <footer class="footer">
         <p class="footer-text">© 2025 CUBO 3D - Todos los derechos reservados</p>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('bg-video');
+            const playPromise = video.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    video.muted = true;
+                    video.play().catch(e => {
+                        console.log("El video no pudo reproducirse:", e);
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
