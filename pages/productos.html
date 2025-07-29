@@ -6,9 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUBO 3D - Productos</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
 
 <body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="../videos/background.mp4" type="video/mp4">
+            <source src="../videos/background.webm" type="video/webm">
+            Tu navegador no soporta videos HTML5
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
     <header class="header">
         <div class="logo-wrapper">
             <img src="../images/logo.png" alt="Logo CUBO 3D" class="logo">
@@ -23,6 +33,7 @@
             </ul>
         </nav>
     </header>
+
     <main>
         <section class="section hero">
             <h1 class="section-title">Productos Destacados</h1>
@@ -31,6 +42,7 @@
                 <img src="../images/Avión.png" alt="Modelo 3D de avión" class="product-image">
             </div>
         </section>
+
         <section class="section">
             <h1 class="section-title">Línea Creativa</h1>
             <ul class="product-list">
@@ -42,6 +54,7 @@
                 <img src="../images/Florero.png" alt="Florero impreso en 3D" class="product-image">
             </div>
         </section>
+
         <section class="section">
             <h1 class="section-title">Línea Técnica</h1>
             <ul class="product-list">
@@ -54,8 +67,26 @@
             </div>
         </section>
     </main>
+
     <footer class="footer">
         <p class="footer-text">© 2025 CUBO 3D - Todos los derechos reservados</p>
     </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('bg-video');
+            const playPromise = video.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    video.muted = true;
+                    video.play().catch(e => {
+                        console.log("El video no pudo reproducirse:", e);
+                    });
+                });
+            }
+        });
+    </script>
 </body>
+
 </html>
