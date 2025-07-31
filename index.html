@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>CUBO 3D</title>
     <link rel="stylesheet" href="./css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css>" rel="stylesheet">
 </head>
+
 <body>
 
     <div class="video-background">
@@ -35,7 +38,7 @@
         <section class="section hero">
             <h1 class="section-title">Servicios Integrales</h1>
             <p class="section-text">No solo imprimimos: te acompañamos desde el diseño hasta el acabado profesional.</p>
-            <div class="image-content"> 
+            <div class="image-content">
                 <img src="./images/Lámpara_3D_1.jpg" alt="Lámpara 3D">
             </div>
         </section>
@@ -69,10 +72,10 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const video = document.getElementById('bg-video');
             const playPromise = video.play();
-            
+
             if (playPromise !== undefined) {
                 playPromise.catch(error => {
                     video.muted = true;
@@ -81,5 +84,9 @@
             }
         });
     </script>
+    <script src="<https://code.jquery.com/jquery-3.5.1.slim.min.js>"></script>
+    <script src="<https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js>"></script>
+    <script src="<https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js>"></script>
 </body>
+
 </html>
