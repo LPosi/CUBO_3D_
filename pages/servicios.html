@@ -6,18 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CUBO 3D - Servicios</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 </head>
 
 <body>
-    <div class="video-background">
-        <video autoplay muted loop playsinline id="bg-video">
-            <source src="../videos/background.mp4" type="video/mp4">
-            <source src="../videos/background.webm" type="video/webm">
-            Tu navegador no soporta videos HTML5
-        </video>
-        <div class="video-overlay"></div>
-    </div>
 
     <header class="header">
         <div class="logo-wrapper">
@@ -42,7 +33,7 @@
                 Perfecto para prototipos, piezas personalizadas o proyectos creativos.
             </p>
             <div class="image-content">
-                <img src="../images/filtro.jpg" alt="Filtro impreso en 3D">
+                <img src="../images/filtro.jpg" alt="Filtro 3D">
             </div>
         </section>
 
@@ -60,7 +51,7 @@
                 </li>
             </ul>
             <div class="image-content">
-                <img src="../images/soporte_pc.jpg" alt="Soporte para PC impreso en 3D">
+                <img src="../images/soporte_pc.jpg" alt="Soporte para PC 3D">
             </div>
         </section>
     </main>
@@ -69,21 +60,6 @@
         <p class="footer-text">© 2025 CUBO 3D - Todos los derechos reservados</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('bg-video');
-            const playPromise = video.play();
-            
-            if (playPromise !== undefined) {
-                playPromise.catch(error => {
-                    video.muted = true;
-                    video.play().catch(e => {
-                        console.log("El video no pudo reproducirse:", e);
-                    });
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>
