@@ -98,6 +98,10 @@ main {
     font-size: 2rem;
 }
 
+.section-title, .section-text, .section-list, {
+    color: white;
+}
+
 .section-subtitle {
     margin: 0px 0px 30px 0px;
 }
