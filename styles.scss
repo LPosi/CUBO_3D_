@@ -1,0 +1,36 @@
+@import 'html';
+@import 'body';
+@import 'header';
+@import 'main';
+@import 'footer';
+@import 'navbar';
+@import 'section';
+@import 'images';
+@import 'form';
+
+$primary-color: white;
+
+body {
+    color: $primary-color;
+}
+
+.nav-link {
+    color: $primary-color;
+}
+
+.section-title {
+    color: $primary-color;
+}
+
+.section-text {
+    color: $primary-color;
+}
+
+.section-list {
+    color: $primary-color;
+}
+
+.form-control {
+    color: $primary-color;
+}
+
