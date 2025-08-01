@@ -6,6 +6,7 @@
 
 html {
     font-size: 16px;
+    height: 100%;
 }
 
 body {
@@ -15,23 +16,31 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    position: relative;
     background-image: url(../images/fondo_hexagonal.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    margin: 0;
 }
 
 .header {
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.85) !important;
     padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.85) !important;
+    padding: 1.5rem;
+    text-align: center;
+    width: 100%;
 }
 
 .logo-wrapper {
@@ -50,38 +59,34 @@ body {
     transform: scale(1.05);
 }
 
-.nav-list {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-}
-
-.nav-list a {
-    text-decoration: none;
-    color: white;
+.nav-link {
     padding: 0.5rem 1rem;
+    color: white !important;
     transition: all 0.3s ease;
-    border-radius: 4px;
+    text-align: center;
 }
 
-.nav-list a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.nav-link:hover,
+.nav-link:focus {
+    color: #4fc3f7 !important;
 }
 
-.nav-list a.active {
-    font-weight: 700;
-    background-color: rgba(79, 195, 247, 0.2);
-    border-bottom: 2px solid #4fc3f7;
+.nav-link.active {
+    color: #4fc3f7 !important;
+    font-weight: 600;
 }
 
-main {
-    flex: 1;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.25rem 0.5rem;
+    margin-left: auto;
+    order: 2;
 }
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 
 .section {
     background-color: rgba(0, 0, 0, 0.7);
@@ -96,25 +101,20 @@ main {
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 2rem;
-}
-
-.section-title, .section-text, .section-list, .section-list ul li {
     color: white;
-}
-
-.section-subtitle {
-    margin: 0px 0px 30px 0px;
 }
 
 .section-text {
     text-align: center;
     margin-bottom: 1.5rem;
+    color: white;
 }
 
 .section-list {
     list-style: none;
     padding: 0;
     margin: 1.5rem 0;
+    color: white;
 }
 
 .section-list li {
@@ -123,7 +123,7 @@ main {
     position: relative;
 }
 
-.section-list li:before {
+.section-list li::before {
     content: "•";
     color: #4fc3f7;
     position: absolute;
@@ -144,17 +144,17 @@ main {
 }
 
 .contact-form {
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: rgba(30, 30, 30, 0.8);
     border-radius: 8px;
 }
 
-.contact-form h2 {
+.contact-form__title {
     text-align: center;
-    margin-bottom: 2.5rem;
-    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
     color: #4fc3f7;
     padding-bottom: 1rem;
     border-bottom: 1px solid rgba(79, 195, 247, 0.3);
@@ -164,9 +164,9 @@ main {
     margin-bottom: 1.5rem;
 }
 
-.form-group label {
+.form-group__label {
     display: block;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
     font-weight: 500;
     color: #fff;
 }
@@ -215,25 +215,7 @@ textarea.form-control {
     transform: translateY(-2px);
 }
 
-.footer {
-    background-color: rgba(0, 0, 0, 0.85);
-    padding: 1.5rem;
-    text-align: center;
-    margin-top: 3rem;
-}
-
 @media screen and (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    .nav-list {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
     main {
         padding: 1rem;
     }
@@ -243,22 +225,12 @@ textarea.form-control {
         padding: 1.5rem;
     }
     
-    body {
-        background: url('../images/fondo_hexagonal.jpg') no-repeat center center/cover;
+    .contact-form {
+        padding: 1.5rem;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .nav-list {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-list a {
-        width: 100%;
-        text-align: center;
-    }
-
     .section-title {
         font-size: 1.5rem;
     }
@@ -269,5 +241,55 @@ textarea.form-control {
 
     .btn-submit {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 670px) {
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 0.25rem;
+    }
+    
+    .navbar-nav {
+        gap: 0.5rem;
+    }
+}
+
+
+@media (max-width: 670px) {
+    .navbar {
+        flex-wrap: nowrap;
+    }
+    
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 0.25rem;
+        width: 100%;
+    }
+    
+    .navbar-nav {
+        gap: 0.5rem;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-collapse.collapse:not(.show) {
+        display: none;
+    }
+    
+    .navbar-collapse.collapsing,
+    .navbar-collapse.show {
+        display: block;
+    }
+    
+    .logo-wrapper {
+        width: 100%;
+        justify-content: space-between;
     }
 }
