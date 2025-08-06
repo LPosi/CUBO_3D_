@@ -1,3 +1,5 @@
+@use "variables";
+@use "utilities";
 @use "html";
 @use "body";
 @use "header";
@@ -8,28 +10,28 @@
 @use "images";
 @use "form";
 
-$primary-color: white;
+$text-color: white;
 
 body {
-  color: $primary-color;
+  color: $text-color;
 }
 
 .nav-link {
-  color: $primary-color;
+  color: $text-color;
 }
 
 .section-title {
-  color: $primary-color;
+  color: $text-color;
 }
 
 .section-text {
-  color: $primary-color;
+  color: $text-color;
 }
 
 .section-list {
-  color: $primary-color;
+  color: $text-color;
 }
 
 .form-control {
-  color: $primary-color;
+  color: $text-color;
 }

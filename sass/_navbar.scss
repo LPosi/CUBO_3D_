@@ -1,6 +1,6 @@
 .navbar {
   padding: 0.5rem 1rem;
-  background-color: rgba(0, 0, 0, 0.85) !important;
+  @include dark-background;
 }
 
 .navbar > .container-fluid {
@@ -33,17 +33,18 @@
 }
 
 .nav-link {
+  color: $text-color;
   padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
+  @include transition;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: #4fc3f7 !important;
+&:hover,
+&:focus {
+  color: $primary-color !important;
 }
 
-.nav-link.active {
-  color: #4fc3f7 !important;
+&.active {
+  color: $primary-color !important;
   font-weight: 600;
 }
 
