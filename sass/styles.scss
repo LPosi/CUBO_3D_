@@ -1,0 +1,35 @@
+@use "html";
+@use "body";
+@use "header";
+@use "main";
+@use "footer";
+@use "navbar";
+@use "section";
+@use "images";
+@use "form";
+
+$primary-color: white;
+
+body {
+  color: $primary-color;
+}
+
+.nav-link {
+  color: $primary-color;
+}
+
+.section-title {
+  color: $primary-color;
+}
+
+.section-text {
+  color: $primary-color;
+}
+
+.section-list {
+  color: $primary-color;
+}
+
+.form-control {
+  color: $primary-color;
+}
