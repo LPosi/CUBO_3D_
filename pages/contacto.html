@@ -70,9 +70,14 @@
         <div class="contact-form">
           <h3 class="contact-form__title">Formulario de contacto</h3>
           <form action="https://getform.io/f/broglvla" method="POST">
-            <input type="text" name="nombre" />Nombre
-            <input type="email" name="email" />Mail
-            <input type="text" name="message" />Descripción
+            <label for="nombre" class="form-group__label">Nombre:</label>
+            <input type="text" name="nombre" />
+            <label for="email" class="form-group__label">Email:</label>
+            <input type="email" name="email" />
+            <label for="mensaje" class="form-group__label"
+              >Describe tu proyecto:</label
+            >
+            <input type="text" name="message" />
             <input
               type="hidden"
               name="_gotcha"
