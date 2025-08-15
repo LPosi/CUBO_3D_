@@ -17,8 +17,8 @@ body {
   background-position: center;
 }
 
-.header {
-  background-color: rgba(0, 0, 0, 0.85) !important;
+header {
+  background-color: rgba(0, 0, 0, 0.85);
   padding: 1rem 2rem;
 }
 
@@ -34,7 +34,7 @@ main {
   main {
     padding: 1rem;
   }
-  .section {
+  section {
     margin: 1.5rem 0;
     padding: 1.5rem;
   }
@@ -42,8 +42,8 @@ main {
     padding: 1.5rem;
   }
 }
-.footer {
-  background-color: rgba(0, 0, 0, 0.85) !important;
+footer {
+  background-color: rgba(0, 0, 0, 0.85);
   padding: 1.5rem;
   text-align: center;
   width: 100%;
@@ -51,7 +51,7 @@ main {
 
 .navbar {
   padding: 0.5rem 1rem;
-  background-color: rgba(0, 0, 0, 0.85) !important;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .navbar > .container-fluid {
@@ -69,18 +69,20 @@ main {
 
 .navbar-collapse {
   flex-grow: 0;
-  display: none !important;
+  display: none;
   justify-content: flex-end;
+  flex-direction: row;
 }
 
 .navbar-collapse.show {
-  display: flex !important;
+  display: flex;
 }
 
 .navbar-nav {
   display: flex;
   align-items: center;
   margin-left: auto;
+  flex-direction: row;
 }
 
 .nav-link {
@@ -90,11 +92,11 @@ main {
 
 .nav-link:hover,
 .nav-link:focus {
-  color: #4fc3f7 !important;
+  color: #4fc3f7;
 }
 
-.nav-link.active {
-  color: #4fc3f7 !important;
+.nav-link.actived {
+  color: #4fc3f7;
   font-weight: 600;
 }
 
@@ -118,6 +120,18 @@ main {
   height: 1.5em;
 }
 
+@media (min-width: 670px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (max-width: 670px) {
+  .navbar-collapse.show {
+    display: none;
+  }
+}
+
 .logo {
   width: 110px;
   height: auto;
@@ -129,14 +143,15 @@ main {
 }
 
 .navbar.bg-dark {
-  border-bottom: none !important;
+  border-bottom: none;
 }
 
 @media (max-width: 670px) {
   .navbar > .container-fluid {
     flex-wrap: wrap;
   }
-  .navbar-collapse {
+  .navbar-collapse.show {
+    display: flex;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 1rem;
     margin-top: 0.5rem;
@@ -159,7 +174,7 @@ main {
     justify-content: space-between;
   }
   .navbar-collapse:not(.show) {
-    display: none !important;
+    display: none;
   }
   .navbar-collapse.collapsing {
     height: auto;
@@ -167,11 +182,11 @@ main {
     overflow: hidden;
   }
   .navbar-collapse.show {
-    display: flex !important;
+    display: none;
     height: auto;
   }
 }
-.section {
+section {
   background-color: rgba(0, 0, 0, 0.7);
   margin: 2rem 0;
   padding: 2rem;
@@ -214,7 +229,7 @@ main {
   .section-title {
     font-size: 1.5rem;
   }
-  .section {
+  section {
     padding: 1.2rem;
   }
   .btn-submit {
